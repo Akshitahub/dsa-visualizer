@@ -1,0 +1,112 @@
+/* Root Variables for Themes */
+:root {
+  --bg-color: #f2f2f2;
+  --text-color: #222;
+  --bar-color: teal;
+  --highlight-color: crimson;
+  --sorted-color: green;
+  --dark-bg: #121212;
+  --dark-text: #eee;
+}
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Select and Buttons */
+label, select, input[type="range"] {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Array Bars Container */
+#array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 90%;
+  margin: 30px auto;
+  border: 2px dashed #aaa;
+  padding: 10px;
+  background: white;
+  overflow-x: auto;
+}
+
+.bar {
+  margin: 0 2px;
+  background-color: var(--bar-color);
+  width: 15px;
+  transition: height 0.3s ease;
+}
+
+/* Info Box */
+#info-box {
+  margin-top: 30px;
+  padding: 20px;
+  width: 80%;
+  margin-inline: auto;
+  background: #fffbe7;
+  border-left: 5px solid orange;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --bar-color: #00bcd4;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.dark-mode #array-container {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+.dark-mode #info-box {
+  background-color: #222;
+  border-color: #007acc;
+  color: var(--dark-text);
+}
+
+
+
+

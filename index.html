@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>DSA Algorithm Visualizer</h1>
+
+  <!-- Dropdown to select algorithm -->
+  <label for="algo-select">Choose Algorithm:</label>
+  <select id="algo-select">
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+    <option value="merge">Merge Sort</option>
+    <option value="quick">Quick Sort</option>
+    <option value="heap">Heap Sort</option>
+    <option value="linear">Linear Search</option>
+    <option value="binary">Binary Search</option>
+  </select>
+
+  <!-- Speed and size sliders -->
+  <label for="speed">Speed:</label>
+  <input type="range" id="speed" min="10" max="1000" step="10" value="100">
+
+  <label for="size">Array Size:</label>
+  <input type="range" id="size" min="5" max="60" value="30">
+
+  <!-- Buttons to control -->
+  <button onclick="generateArray()">Generate Array</button>
+  <button onclick="start()">Start</button>
+  <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+  <!-- Display array bars -->
+  <div id="array-container"></div>
+
+  <!-- Algorithm info -->
+  <div id="info-box">
+    <h3>Algorithm Details</h3>
+    <p id="algo-description">Select an algorithm to begin</p>
+    <p><strong>Time Complexity:</strong> <span id="time-complexity"></span></p>
+    <p><strong>Space Complexity:</strong> <span id="space-complexity"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
